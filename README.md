@@ -1,4 +1,3 @@
-# alx-backend
 <p align="center">
 <h2 align="center"><img align="center" src="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png" alt="footer" width="150"  height="150"/></h2>
 
