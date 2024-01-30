@@ -1,6 +1,6 @@
 # 0x01. Caching
 
-# Background Context
+# Background Context ⛱️
 In this project, you learn different caching algorithms.
 
 # Resources🏗️
