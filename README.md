@@ -19,8 +19,8 @@ To install the backend, you will need to have Python 3 and PostgreSQL installed.
 </div>
 
 - [0x00](./0x00-pagination) : How to paginate: a dataset with simple page and page_size parameters, a dataset with hypermedia metadata, in a deletion-resilient manner.
+- [0x01](./0x01-caching) : What a `caching system` is; What `FIFO`, `LIFO`, `LRU`, `MRU` & `LFU` means; What the purpose of a `caching system` and What limits a `caching system` have.
 <!--
-- [0x01](./0x01-NoSQL) : What `NoSQL` means, How to query information from a `NoSQL` database and How to use `MongoDB`.
 - [0x02](./0x02-redis_basic) : How to use `redis` for basic operations and as a simple cache.
 - [0x03](./0x03-ES6_data_manipulation) : Map, filter and reduce.
 - [0x04](./0x04-TypeScript) : Types, Interfaces, Classes, Functions. -->
