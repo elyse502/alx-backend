@@ -153,9 +153,9 @@ Based on the inferred time zone, display the current time on the home page in th
 
 Use the following translations
 
-| msgid |	English	French |
-| ----- | ---------------- |
-| `current_time_is` |	`"The current time is %(current_time)s."` |	`"Nous sommes le %(current_time)s."`
+| msgid |	English	| French |
+| ----- | --------- | ------ |
+| `current_time_is` |	`"The current time is %(current_time)s."` |	`"Nous sommes le %(current_time)s."` |
 
 **Displaying the time in French looks like this:**
 
