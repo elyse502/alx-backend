@@ -121,24 +121,49 @@ Visiting `http://127.0.0.1:5000/?login_as=2` **in your browser should display th
 
 <img width="259" alt="277f24308c856a09908c" src="https://github.com/elyse502/alx-backend/assets/125453474/90f601c3-2113-4992-be40-b6d21d4846f7">
 
+## 6. Use user locale: [6-app.py](6-app.py), [templates/6-index.html](templates/6-index.html)
+Change your `get_locale` function to use a user’s preferred local if it is supported.
 
+The order of priority should be
 
+1. Locale from URL parameters
+2. Locale from user settings
+3. Locale from request header
+4. Default locale
 
+Test by logging in as different users
 
+<img width="272" alt="9941b480b0b9d87dc5de" src="https://github.com/elyse502/alx-backend/assets/125453474/fc5ddb6f-d9ba-4cec-9453-528921ea8e6f">
 
+## 7. Infer appropriate time zone: [7-app.py](7-app.py), [templates/7-index.html](templates/7-index.html)
+Define a `get_timezone function` and use the `babel.timezoneselector` decorator.
 
+The logic should be the same as `get_locale`:
 
+1. Find `timezone` parameter in URL parameters
+2. Find time zone from user settings
+3. Default to UTC
 
+Before returning a URL-provided or user time zone, you must validate that it is a valid time zone. To that, use `pytz.timezone` and catch the `pytz.exceptions.UnknownTimeZoneError` exception.
 
+## 8. Display the current time: [app.py](app.py), [templates/index.html](templates/index.html), [translations/en/LC_MESSAGES/messages.po](translations/en/LC_MESSAGES/messages.po), [translations/fr/LC_MESSAGES/messages.po](translations/fr/LC_MESSAGES/messages.po)
+Based on the inferred time zone, display the current time on the home page in the default format. For example:
 
+`Jan 21, 2020, 5:55:39 AM` or 21 `janv. 2020 à 05:56:28`
 
+Use the following translations
 
+| msgid |	English	French |
+| ----- | ---------------- |
+| `current_time_is` |	`"The current time is %(current_time)s."` |	`"Nous sommes le %(current_time)s."`
 
+**Displaying the time in French looks like this:**
 
+<img width="299" alt="bba4805d6dca0a46a0f6" src="https://github.com/elyse502/alx-backend/assets/125453474/747a00db-4735-4bb3-98dc-bc7791d25771">
 
+**Displaying the time in English looks like this:**
 
-
-
+<img width="328" alt="54f3be802024dbcf06f4" src="https://github.com/elyse502/alx-backend/assets/125453474/f2ba10d3-81f8-4da3-9b34-66bb71e2b0f9">
 
 
 
