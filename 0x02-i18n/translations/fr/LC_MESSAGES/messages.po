@@ -21,21 +21,21 @@ msgstr ""
 #: templates/3-index.html:7 templates/4-index.html:7 templates/5-index.html:7
 #: templates/6-index.html:7 templates/index.html:7
 msgid "home_title"
-msgstr "Welcome to Holberton"
+msgstr "Bienvenue chez Holberton"
 
 #: templates/3-index.html:10 templates/4-index.html:10 templates/5-index.html:10
 #: templates/6-index.html:10 templates/index.html:10
 msgid "home_header"
-msgstr "Hello world!"
+msgstr "Bonjour monde!"
 
 #: templates/5-index.html:12 templates/6-index.html:12 templates/index.html:12
 msgid "logged_in_as"
-msgstr "You are logged in as %(username)s."
+msgstr "Vous êtes connecté en tant que %(username)s."
 
 #: templates/5-index.html:14 templates/6-index.html:14 templates/index.html:14
 msgid "not_logged_in"
-msgstr "You are not logged in."
+msgstr "Vous n'êtes pas connecté."
 
 #: templates/index.html:17
 msgid "current_time_is"
-msgstr "The current time is %(current_time)s."
+msgstr "Nous sommes le %(current_time)s."
