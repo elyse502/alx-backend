@@ -1,4 +1,4 @@
-# 0x02. i18n
+# 0x02. i18n 
 
 ![91e1c50322b2428428f9](https://github.com/elyse502/alx-backend/assets/125453474/4274bad0-5d45-4ff0-8e8d-726442c6ea81)
 
