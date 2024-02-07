@@ -1,3 +1,11 @@
+<div align="center">
+  
+![ALX-Banner](https://github.com/elyse502/alx-backend/assets/125453474/eb1e33ed-9628-43e7-b44d-034313502cf9)
+</div>
+
+![ALX1](https://github.com/elyse502/alx-backend/assets/125453474/a9c38230-7d04-4b44-a830-686dc22c7b61)
+
+
 <p align="center">
 <h2 align="center"><img align="center" src="https://assets.imaginablefutures.com/media/images/ALX_Logo.max-200x150.png" alt="footer" width="150"  height="150"/></h2>
 
