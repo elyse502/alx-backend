@@ -5,7 +5,7 @@
 # Resources🏗️
 ### Read or watch:
 * [Flask-Babel](https://web.archive.org/web/20201111174034/https://flask-babel.tkte.ch/)
-* [Flask-Babel-1](https://python-babel.github.io/flask-babel/)
+* [Flask-Babel-1](https://python-babel.github.io/flask-babel/) (_**Optional**_)
 * [Flask i18n tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n)
 * [pytz](https://sourceforge.net/directory/software-development/linux/)
 
