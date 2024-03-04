@@ -134,7 +134,7 @@ Copy the `dump.rdb` from the `redis-5.0.7` directory into the root of the Queuin
 ## 1. Node Redis Client: [0-redis_client.js](0-redis_client.js)
 Install [node_redis](https://github.com/redis/node-redis) using npm
 
-Using Babel and ES6, write a script named `0-redis_client.js`. It should connect to the Redis server running on your machine:
+Using Babel and **ES6**, write a script named `0-redis_client.js`. It should connect to the Redis server running on your machine:
 
 * It should log to the console the message `Redis client connected to the server` when the connection to Redis works correctly
 * It should log to the console the message `Redis client not connected to the server: ERROR_MESSAGE` when the connection to Redis does not work
@@ -181,7 +181,47 @@ Redis client connected to the server
 bob@dylan:~$
 ```
 
+## 2. Node Redis client and basic operations: [1-redis_op.js](1-redis_op.js)
+In a file `1-redis_op.js`, copy the code you previously wrote (`0-redis_client.js`).
 
+Add two functions:
+
+* `setNewSchool`:
+  * It accepts two arguments `schoolName`, and `value`.
+  * It should set in Redis the value for the key `schoolName`
+  * It should display a confirmation message using `redis.print`
+
+* `displaySchoolValue`:
+  * It accepts one argument `schoolName`.
+  * It should log to the console the value for the key passed as argument
+
+At the end of the file, call:
+
+* `displaySchoolValue('Holberton');`
+* `setNewSchool('HolbertonSanFrancisco', '100');`
+* `displaySchoolValue('HolbertonSanFrancisco');`
+
+### Requirements:
+* Use callbacks for any of the operation, we will look at async operations later
+```groovy
+bob@dylan:~$ npm run dev 1-redis_op.js 
+
+> queuing_system_in_js@1.0.0 dev /root
+> nodemon --exec babel-node --presets @babel/preset-env "1-redis_op.js"
+
+[nodemon] 2.0.4
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 1-redis_op.js`
+Redis client connected to the server
+School
+Reply: OK
+100
+^C
+
+bob@dylan:~$
+```
 
 
 
