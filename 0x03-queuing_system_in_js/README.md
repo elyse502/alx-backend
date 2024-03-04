@@ -808,7 +808,7 @@ Add the route `GET /reserve_seat` that:
 * Returns `{ "status": "Reservation are blocked" }` if `reservationEnabled` is `false`
 * Creates and queues a job in the queue `reserve_seat`:
   * Save the job and return:
-    * `{ "status": "Reservation in process" } if no error`
+    * `{ "status": "Reservation in process" }` if no error
     * Otherwise: `{ "status": "Reservation failed" }`
   * When the job is completed, print in the console: `Seat reservation job JOB_ID completed`
   * When the job failed, print in the console: `Seat reservation job JOB_ID failed: ERROR_MESSAGE`
