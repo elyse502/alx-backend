@@ -37,3 +37,4 @@ jest.config.js
 *.swo
 
 __pyc*
+redis*
