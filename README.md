@@ -29,8 +29,8 @@ To install the backend, you will need to have Python 3 and PostgreSQL installed.
 - [0x00](./0x00-pagination) : How to paginate: a dataset with simple page and page_size parameters, a dataset with hypermedia metadata, in a deletion-resilient manner.
 - [0x01](./0x01-caching) : What a `caching system` is; What `FIFO`, `LIFO`, `LRU`, `MRU` & `LFU` means; What the purpose of a `caching system` and What limits a `caching system` have.
 - [0x02](./0x02-i18n) : Learn how: to parametrize `Flask templates` to display different languages; to infer the correct `locale` based on URL parameters, user settings or request headers & to localize `timestamps`
+- [0x03](./0x03-queuing_system_in_js) : How to: run a `Redis server` on your machine and  run simple operations with the `Redis client` & build a basic Express app interacting with a `Redis server`.
 <!--
-- [0x03](./0x03-ES6_data_manipulation) : Map, filter and reduce.
 - [0x04](./0x04-TypeScript) : Types, Interfaces, Classes, Functions. -->
 
 ## Access ℹ️
