@@ -549,7 +549,86 @@ Notification job created: 48
 Notification job created: 49
 ```
 
+## 9. Track progress and errors with Kue: Create the Job processor: [7-job_processor.js](7-job_processor.js)
+In a file named `7-job_processor.js`:
 
+Create an array that will contain the blacklisted phone numbers. Add in it `4153518780` and `4153518781` - these 2 numbers will be blacklisted by our jobs processor.
+
+Create a function `sendNotification` that takes 4 arguments: `phoneNumber`, `message`, `job`, and `done`:
+
+* When the function is called, track the progress of the `job` of `0` out of `100`
+* If `phoneNumber` is included in the “blacklisted array”, fail the job with an `Error` object and the message: `Phone number PHONE_NUMBER is blacklisted`
+* Otherwise:
+  * Track the progress to 50%
+  * Log to the console `Sending notification to PHONE_NUMBER, with message: MESSAGE`
+
+Create a queue with `Kue` that will proceed job of the queue `push_notification_code_2` with two jobs at a time.
+
+### Requirements:
+
+* You only need one Redis server to execute the program
+* You will need to have two node processes to run each script at the same time
+* You muse use `Kue` to set up the queue
+* Executing the jobs list should log to the console the following:
+
+**Terminal 2:**
+```groovy
+bob@dylan:~$ npm run dev 7-job_processor.js 
+
+> queuing_system_in_js@1.0.0 dev /root
+> nodemon --exec babel-node --presets @babel/preset-env "7-job_processor.js"
+
+[nodemon] 2.0.4
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 7-job_processor.js`
+Sending notification to 4153518743, with message: This is the code 4321 to verify your account
+Sending notification to 4153538781, with message: This is the code 4562 to verify your account
+Sending notification to 4153118782, with message: This is the code 4321 to verify your account
+Sending notification to 4153718781, with message: This is the code 4562 to verify your account
+Sending notification to 4159518782, with message: This is the code 4321 to verify your account
+Sending notification to 4158718781, with message: This is the code 4562 to verify your account
+Sending notification to 4153818782, with message: This is the code 4321 to verify your account
+Sending notification to 4154318781, with message: This is the code 4562 to verify your account
+Sending notification to 4151218782, with message: This is the code 4321 to verify your account
+```
+
+**And in the same time in Terminal 1:**
+```groovy
+...
+Notification job #39 0% complete
+Notification job #40 0% complete
+Notification job #39 failed: Phone number 4153518780 is blacklisted
+Notification job #40 failed: Phone number 4153518781 is blacklisted
+Notification job #41 0% complete
+Notification job #41 50% complete
+Notification job #42 0% complete
+Notification job #42 50% complete
+Notification job #41 completed
+Notification job #42 completed
+Notification job #43 0% complete
+Notification job #43 50% complete
+Notification job #44 0% complete
+Notification job #44 50% complete
+Notification job #43 completed
+Notification job #44 completed
+Notification job #45 0% complete
+Notification job #45 50% complete
+Notification job #46 0% complete
+Notification job #46 50% complete
+Notification job #45 completed
+Notification job #46 completed
+Notification job #47 0% complete
+Notification job #47 50% complete
+Notification job #48 0% complete
+Notification job #48 50% complete
+Notification job #47 completed
+Notification job #48 completed
+Notification job #49 0% complete
+Notification job #49 50% complete
+Notification job #49 completed
+```
 
 
 
