@@ -777,9 +777,9 @@ bob@dylan:~$
 
 #### Requirements:
 
-Make sure to use promisify with Redis
-Make sure to use the await/async keyword to get the value from Redis
-Make sure the format returned by the web application is always JSON and not text
+* Make sure to use `promisify` with Redis
+* Make sure to use the `await`/`async` keyword to get the value from Redis
+* Make sure the format returned by the web application is always JSON and not text
 
 
 
