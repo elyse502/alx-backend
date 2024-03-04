@@ -462,8 +462,92 @@ Sending notification to 4153518780, with message: This is the code to verify you
 ```
 BOOM! same as `5-subscriber.js` and `5-publisher.js` but with a module to manage jobs.
 
+## 8. Track progress and errors with Kue: Create the Job creator: [7-job_creator.js](7-job_creator.js)
+In a file named `7-job_creator.js`:
 
+Create an array `jobs` with the following data inside:
+```groovy
+const jobs = [
+  {
+    phoneNumber: '4153518780',
+    message: 'This is the code 1234 to verify your account'
+  },
+  {
+    phoneNumber: '4153518781',
+    message: 'This is the code 4562 to verify your account'
+  },
+  {
+    phoneNumber: '4153518743',
+    message: 'This is the code 4321 to verify your account'
+  },
+  {
+    phoneNumber: '4153538781',
+    message: 'This is the code 4562 to verify your account'
+  },
+  {
+    phoneNumber: '4153118782',
+    message: 'This is the code 4321 to verify your account'
+  },
+  {
+    phoneNumber: '4153718781',
+    message: 'This is the code 4562 to verify your account'
+  },
+  {
+    phoneNumber: '4159518782',
+    message: 'This is the code 4321 to verify your account'
+  },
+  {
+    phoneNumber: '4158718781',
+    message: 'This is the code 4562 to verify your account'
+  },
+  {
+    phoneNumber: '4153818782',
+    message: 'This is the code 4321 to verify your account'
+  },
+  {
+    phoneNumber: '4154318781',
+    message: 'This is the code 4562 to verify your account'
+  },
+  {
+    phoneNumber: '4151218782',
+    message: 'This is the code 4321 to verify your account'
+  }
+];
+```
+After this array created:
 
+* Create a queue with `Kue`
+* Write a loop that will go through the array `jobs` and for each object:
+  * Create a new job to the queue `push_notification_code_2` with the current object
+  * If there is no error, log to the console `Notification job created: JOB_ID`
+  * On the job completion, log to the console `Notification job JOB_ID completed`
+  * On the job failure, log to the console `Notification job JOB_ID failed: ERROR`
+  * On the job progress, log to the console `Notification job JOB_ID PERCENTAGE% complete`
+
+**Terminal 1:**
+```groovy
+bob@dylan:~$ npm run dev 7-job_creator.js 
+
+> queuing_system_in_js@1.0.0 dev /root
+> nodemon --exec babel-node --presets @babel/preset-env "7-job_creator.js"
+
+[nodemon] 2.0.4
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `babel-node --presets @babel/preset-env 7-job_creator.js`
+Notification job created: 39
+Notification job created: 40
+Notification job created: 41
+Notification job created: 42
+Notification job created: 43
+Notification job created: 44
+Notification job created: 45
+Notification job created: 46
+Notification job created: 47
+Notification job created: 48
+Notification job created: 49
+```
 
 
 
