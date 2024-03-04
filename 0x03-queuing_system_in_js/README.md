@@ -717,7 +717,7 @@ Create a function named `getItemById`:
 * It will return the item from `listProducts` with the same id
 
 ### Server
-Create an `express` server listening on the port 1245. (You will start it via: `npm run dev 9-stock.js`)
+Create an `express` server listening on the port 1245. (You will start it via: **`npm run dev 9-stock.js`**)
 
 ### Products
 Create the route `GET /list_products` that will return the list of every available product with the following JSON format:
